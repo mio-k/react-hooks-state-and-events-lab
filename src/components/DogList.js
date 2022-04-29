@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import Item from "./Item";
+import DogItem from "./DogItem";
 
-function ShoppingList({ items }) {
+function DogList({ dogItems }) {
     const [selectedCategory, setSelectedCategory] = useState("All");
-    const filteredList = items.filter((items)=> {
+    const filteredList = dogItems.filter((dogItems)=> {
       if(selectedCategory === "All") {
         return true
-      } else { return items.category === selectedCategory}
+      } else { return dogItems.category === selectedCategory}
     })
     function handleSelect(e){
       setSelectedCategory(e.target.value);
@@ -22,13 +22,13 @@ function ShoppingList({ items }) {
           <option value="Dessert">Dessert</option>
         </select>
       </div>
-      <ul className="Items">
+      <ul className="dogItems">
         {filteredList.map((item) => (
-          <Item key={item.id} name={item.name} category={item.category} />
+          <dogItem key={dogItem.id} name={dogItem.name} category={dogItem.category} />
         ))}
       </ul>
     </div>
   );
 }
 
-export default ShoppingList;
+export default DogList;

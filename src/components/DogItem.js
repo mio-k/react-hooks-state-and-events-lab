@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Item({ name, category }) {
+function DogItem({ name, category }) {
   const [isInCart, setIsInCart] = useState(false);
   const cartStatus = isInCart ? "in-cart" : "";
   const buttonText = isInCart ? "Remove from Cart" : "Add to Cart";
@@ -16,4 +16,4 @@ function Item({ name, category }) {
   );
 }
 
-export default Item;
+export default DogItem;

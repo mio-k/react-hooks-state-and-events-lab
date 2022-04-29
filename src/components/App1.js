@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import ShoppingList from "./ShoppingList";
-import itemData from "../data/items";
+import DogList from "./DogList";
+import dogItemData from "../data/dogItems";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
